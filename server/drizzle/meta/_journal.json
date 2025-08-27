@@ -8,6 +8,20 @@
       "when": 1756284589161,
       "tag": "0000_minor_zombie",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1756309573899,
+      "tag": "0001_bumpy_wallflower",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1756310177151,
+      "tag": "0002_great_imperial_guard",
+      "breakpoints": true
     }
   ]
 }

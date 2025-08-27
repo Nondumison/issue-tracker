@@ -1,4 +1,11 @@
-import { pgTable, serial, varchar, text, timestamp, boolean } from "drizzle-orm/pg-core";
+import {
+  pgTable,
+  serial,
+  varchar,
+  text,
+  timestamp,
+  integer,
+} from "drizzle-orm/pg-core";
 
 export const issues = pgTable("issues", {
   id: serial("id").primaryKey(),
@@ -7,6 +14,11 @@ export const issues = pgTable("issues", {
   status: varchar("status", { length: 50 }).notNull().default("open"),
   createdAt: timestamp("created_at").defaultNow().notNull(),
   updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  createdBy: integer("created_by")
+    .notNull()
+    .references(() => users.id)
+    .default(1),
+  assignedTo: integer("assigned_to").references(() => users.id),
 });
 
 export const users = pgTable("users", {
