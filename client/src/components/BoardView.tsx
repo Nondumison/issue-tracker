@@ -17,7 +17,6 @@ export default function BoardView({
 }: BoardViewProps) {
   return (
     <div className={`grid gap-6 ${statusFilter === 'all' ? 'md:grid-cols-2' : 'md:grid-cols-1'}`}>
-      {/* Open Issues Column - only show if 'all' or 'open' is selected */}
       {(statusFilter === 'all' || statusFilter === 'open') && (
         <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow-sm">
           <h3 className="font-semibold text-lg mb-4 flex items-center">
@@ -43,7 +42,6 @@ export default function BoardView({
         </div>
       )}
 
-      {/* Closed Issues Column - only show if 'all' or 'closed' is selected */}
       {(statusFilter === 'all' || statusFilter === 'closed') && (
         <div className="bg-gray-100 dark:bg-gray-800 p-4 rounded-xl shadow-sm">
           <h3 className="font-semibold text-lg mb-4 flex items-center">

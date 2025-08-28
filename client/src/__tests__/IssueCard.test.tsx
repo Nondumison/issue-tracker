@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from "@testing-library/react";
-import IssueCard from "../components/IssueCard"; // adjust path
+import IssueCard from "../components/IssueCard";
 import "@testing-library/jest-dom";
 
 describe("IssueCard", () => {
